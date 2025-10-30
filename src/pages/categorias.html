@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/style/output.css">
+    <script src="/src/js/loader.js"></script>
+</head>
+<body>
+
+    <!-- Encabezado -->
+     <header></header>
+
+    <!-- Cuerpo -->
+    <main>
+       <!-- Categorias -->
+     <section id="categorias" class="categorias py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Nuestras Categorias</h2>
+                <p class="text-gray-600 text">Descubre nuestra amplia gama de productos tecnológicos</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Categoria A -->
+                 <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="laptops">
+                    <div class="text-6xl mb-6 filter drop-shadow-lg">💻</div>
+
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Laptops</h3>
+                    <p class="text-gray-600 mb-6">Las Mejores marcas y modelos para trabajo y gaming</p>
+                    <a href="#laptopsmark" class="text-blue-600 font-semibold">Ver Mas →</a>
+                 </div>
+
+                 <!-- Categoria B -->
+                 <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="celulares">
+                    <div class="text-6xl mb-6 filter drop-shadow-lg">📱</div>
+
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Celulares</h3>
+                    <p class="text-gray-600 mb-6">Ultima tecnologia movil de todas las marcas</p>
+                    <a href="#celularesmark" class="text-blue-600 font-semibold">Ver Mas →</a>
+                 </div>
+
+                 <!-- Categoria C -->
+                 <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="componentes">
+                    <div class="text-6xl mb-6 filter drop-shadow-lg">⚙</div>
+
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Componentes</h3>
+                    <p class="text-gray-600 mb-6">Arma tu pc ideal con los mejores componentes</p>
+                    <a href="#componentesmark" class="text-blue-600 font-semibold">Ver Mas →</a>
+                 </div>
+            </div>
+        </div>
+     </section>
+               <!-- Productos Laptops -->
+    <section id="laptopsmark" class="productos-destacados py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Laptops</h2>
+                <p class="text-gray-600 text-lg">Los productos mas populares en nuestra tienda.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid"> 
+
+            <!-- Producto A -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="MacBook-Pro-M3" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">MacBook Pro M3</h3>
+                    <p class="text-gray-600 mb-4">Potencia profesional para creativos y desarrolladores.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$2,499,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$2,499,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="MacBook-Pro-M3" data-price="2499000" data-id="macbook-pro-m3" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto B -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto C -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+            <!-- Producto F -->
+            <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto E -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+         <!-- Productos Celulares -->
+    <section id="celularesmark" class="productos-destacados py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Celulares</h2>
+                <p class="text-gray-600 text-lg">Los productos mas populares en nuestra tienda.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid"> 
+
+            <!-- Producto A -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="MacBook-Pro-M3" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">MacBook Pro M3</h3>
+                    <p class="text-gray-600 mb-4">Potencia profesional para creativos y desarrolladores.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$2,499,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$2,499,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="MacBook-Pro-M3" data-price="2499000" data-id="macbook-pro-m3" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto B -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto C -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+            <!-- Producto F -->
+            <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto E -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+         <!-- Productos Laptops -->
+    <section id="componentesmark" class="productos-destacados py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Componentes</h2>
+                <p class="text-gray-600 text-lg">Los productos mas populares en nuestra tienda.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid"> 
+
+            <!-- Producto A -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="MacBook-Pro-M3" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">MacBook Pro M3</h3>
+                    <p class="text-gray-600 mb-4">Potencia profesional para creativos y desarrolladores.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$2,499,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$2,499,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="MacBook-Pro-M3" data-price="2499000" data-id="macbook-pro-m3" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto B -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto C -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+            <!-- Producto F -->
+            <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone-15-Pro" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">El smartphone más avanzado con chip A17 Pro.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-3xl font-bold text-black mb-2">$1,199,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="iPhone-15-Pro" data-price="1199000" data-id="iphone-15-pro" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Producto E -->
+             <div class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+                <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX-4070-Super" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">RTX 4070 Super</h3>
+                    <p class="text-gray-600 mb-4">Tarjeta gráfica de nueva generación para gaming.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+                        <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
+                    </div>
+                    <div class="justify-between flex items-center">
+                        <div>
+                            <span class="text-gray-400 line-through text-sm">$749,000</span>
+                            <span class="text-3xl font-bold text-blue-600 mb-2">$599,000</span>
+                        </div>
+                        <!-- Boton -->
+                         <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105" data-product="RTX-4070-Super" data-price="599000" data-id="rtx-4070-super" data-image="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600">Comprar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer></footer>
+    
+</body>
+</html>
