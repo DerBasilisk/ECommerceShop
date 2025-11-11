@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   edad: { type: Number, required: true },
   telefono: { type: Number, required: true, maxlength: 12 },
   correo: { type: String, required: true },
-  passwords: { type: String, required: true, minlength: 8 },
+  passwords: { type: String, required: true, minlength: 10 },
 });
 
 const User = mongoose.model("User", userSchema, "user");
