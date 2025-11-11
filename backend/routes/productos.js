@@ -21,4 +21,14 @@ router.post("/",async function(req,res){
     }
 });
 
-export default router
+// Datos de la base de datos
+router.get("/",async(req,res) => {
+    try{const productos = await Productos.find();
+        res.json(productos);
+
+    } catch (error) {
+        res.status(500).json({mesagge:"Error al obtener los productos"});
+    }
+});
+
+export default router;
