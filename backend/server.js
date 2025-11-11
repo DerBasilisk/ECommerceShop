@@ -3,6 +3,7 @@ import cors from 'cors';
 import "./db/db.js";
 import ProductosRouter from "./routes/productos.js";
 import UserRouter from "./routes/user.js";
+import { loginuser } from './controllers/login.js';
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.get('/', (req, res) => {
 
 app.use("/api/productos", ProductosRouter);
 app.use("/api/user", UserRouter);
+app.use("/api/login",loginuser)
 
 app.listen(8081, () => console.log('Servidor corriendo en http://localhost:8081'));
