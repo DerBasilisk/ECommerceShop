@@ -11,7 +11,7 @@ router.post("/register",async(req,res)=>{
         }
         
         //validar
-        const existeuser =await user.find({correo});
+        const existeuser =await user.findOne({correo});
         if (existeuser){
             return res.status(400).json({message: "El Usuario ya se encuentra registrado"});
         }
