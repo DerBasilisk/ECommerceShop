@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error cargando:", file, error));
     }
   
-    loadComponent("header", "/src/pages/partials/header.html");
-    loadComponent("footer", "/src/pages/partials/footer.html");
+    loadComponent("header", "../pages/partials/header.html");
+    loadComponent("footer", "../pages/partials/footer.html");
   });
   
