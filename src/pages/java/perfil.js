@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 <button id="logout-btn"
                     class="flex items-center w-full px-4 py-3 text-sm text-gray-600
-                           hover:bg-blue-100 hover:text-blue-800 
-                           active:bg-blue-200 transition-all duration-150 rounded-md cursor-pointer">
+                           hover:bg-red-100 hover:text-red-800 
+                           active:bg-red-200 transition-all duration-150 rounded-md cursor-pointer">
                     Cerrar sesión
                 </button>
             </div>
