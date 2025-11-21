@@ -22,6 +22,20 @@ export const loginuser = async (req, res) => {
       return res.status(401).json({ message: "Contraseña incorrecta" });
     }
 
+    //validar
+    res.status(200).json({
+      message:"Inicio Correcto",
+      usuario:{
+        userId:usuario.userId,
+        nombre:usuario.nombre,
+        apellido:usuario.apellido,
+        edad:usuario.edad,
+        telefono:usuario.telefono,
+        correo:usuario.correo,
+        passwords:usuario.passwords
+      }
+    })
+
     // Si todo está bien
     res.status(200).json({ message: "Ingreso exitoso", usuario: usuario.nombre });
 

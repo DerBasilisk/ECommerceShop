@@ -5,48 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore Pro / Categorias</title>
     <link rel="stylesheet" href="../style/output.css">
-    <script src="../js/loader.js"></script>
+    
 </head>
 <body>
 
-    <!-- Encabezado -->
-     <header></header>
+     <!-- Encabezado -->
+     <header class="bg-white  shadow-lg  sticky top-0 z-50">
+      <nav class="container mx-auto px-4 py-4">
+          <div class="flex justify-between items-center">
+  
+              <!-- Logo Inicio -->
+              <div class="flex items-center">
+                  <div class="bg-linear-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg mr-3">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"> 
+                          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/> 
+                      </svg>
+                  </div>
+                  <h1 class="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      TechStore Pro
+                  </h1>
+              </div>
+  
+              <!-- Nav Inicio -->
+              <div class="hidden md:flex space-x-6">
+                  <a href="../pages/index.html" class="text-gray-700  hover:text-blue-600 font-medium transition-colors duration-200 relative group">
+                      Inicio
+                      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                  </a>
+                  <a href="../pages/productos.html" class="text-gray-700  hover:text-blue-600 font-medium transition-colors duration-200 relative group">
+                      Productos
+                      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                  </a>
+                  <a href="../pages/categorias.html" class="text-gray-700  hover:text-blue-600 font-medium transition-colors duration-200 relative group">
+                      Categorias
+                      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                  </a>
+                  <a href="../pages/contacto.html" class="text-gray-700  hover:text-blue-600 font-medium transition-colors duration-200 relative group">
+                      Contacto
+                      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                  </a>
+              </div>
+  
+              <!-- Login y Carrito -->
+              <div class="flex items-center space-x-4">
+  
+                  <div id="user-menu-container"></div>
+                  <!-- Login -->
+                  <a href="../pages/login.html" id="login" class="relative group p-2.5 hover:bg-linear-to-r hover:from-blue-50  hover:to-indigo-50  rounded-xl transition-all duration-300 transform hover:scale-105">
+                      <svg class="w-6 h-6 text-gray-700  group-hover:text-blue-600  transition-all duration-300 group-hover:rotate-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"> 
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path> 
+                      </svg>
+                  </a>
+              
+  
+                  <!-- Carrito -->
+                  <a href="../pages/carrito.html" id="carrito" class="relative group p-2.5 hover:bg-linear-to-r hover:from-blue-50  hover:to-indigo-50  rounded-xl transition-all duration-300 transform hover:scale-105">
+                      <svg class="w-6 h-6 text-gray-700  group-hover:text-blue-600  transition-all duration-300 group-hover:rotate-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"> 
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4L7 13m0 0l-1.1 5h1.1m0-5v5h10m-10 0a2 2 0 104 0m6 0a3 2 0 100 4"></path> 
+                      </svg>
+                  </a>
+  
+              </div>
+          </div>
+      </nav>
+  </header>
+
 
     <!-- Cuerpo -->
     <main>
        <!-- Categorias -->
-     <section id="categorias" class="categorias py-16 bg-gray-50 dark:bg-gray-800">
+     <section id="categorias" class="categorias py-16 bg-gray-50 ">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 dark:text-gray-50">Nuestras Categorias</h2>
-                <p class="text-gray-600 dark:text-gray-400 text">Descubre nuestra amplia gama de productos tecnológicos</p>
+                <h2 class="text-4xl font-bold mb-4 ">Nuestras Categorias</h2>
+                <p class="text-gray-600  text">Descubre nuestra amplia gama de productos tecnológicos</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Categoria A -->
-                 <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="laptops">
+                 <div class="bg-white  p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="laptops">
                     <div class="text-6xl mb-6 filter drop-shadow-lg">💻</div>
 
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-50">Laptops</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Las Mejores marcas y modelos para trabajo y gaming</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 ">Laptops</h3>
+                    <p class="text-gray-600  mb-6">Las Mejores marcas y modelos para trabajo y gaming</p>
                     <a href="#laptopsmark" class="text-blue-600 font-semibold">Ver Mas →</a>
                  </div>
 
                  <!-- Categoria B -->
-                 <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="celulares">
+                 <div class="bg-white  p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="celulares">
                     <div class="text-6xl mb-6 filter drop-shadow-lg">📱</div>
 
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-50">Celulares</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Ultima tecnologia movil de todas las marcas</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 ">Celulares</h3>
+                    <p class="text-gray-600  mb-6">Ultima tecnologia movil de todas las marcas</p>
                     <a href="#celularesmark" class="text-blue-600 font-semibold">Ver Mas →</a>
                  </div>
 
                  <!-- Categoria C -->
-                 <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="componentes">
+                 <div class="bg-white  p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer category-card product-hover" data-category="componentes">
                     <div class="text-6xl mb-6 filter drop-shadow-lg">⚙</div>
 
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-50">Componentes</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Arma tu pc ideal con los mejores componentes</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 ">Componentes</h3>
+                    <p class="text-gray-600  mb-6">Arma tu pc ideal con los mejores componentes</p>
                     <a href="#componentesmark" class="text-blue-600 font-semibold">Ver Mas →</a>
                  </div>
             </div>
@@ -54,11 +113,11 @@
      </section>
 
                <!-- Productos Laptops -->
-<section id="laptopsmark" class="productos-destacados py-16 bg-white dark:bg-gray-900">
+<section id="laptopsmark" class="productos-destacados py-16 bg-white ">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-4 dark:text-white">Laptops</h2>
-      <p class="text-gray-600 dark:text-gray-400 text-lg">
+      <h2 class="text-4xl font-bold mb-4 ">Laptops</h2>
+      <p class="text-gray-600  text-lg">
         Los productos más populares en nuestra tienda.
       </p>
     </div>
@@ -66,14 +125,14 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid">
 
       <!-- Producto A: MacBook Pro M3 -->
-      <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+      <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
         <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 w flex items-center justify-center relative overflow-hidden">
           <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="MacBook Pro M3" class="w-full h-full object-cover">
           <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">MacBook Pro M3</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">Potencia profesional para creativos y desarrolladores.</p>
+          <h3 class="font-bold text-xl mb-2 text-gray-800 ">MacBook Pro M3</h3>
+          <p class="text-gray-600  mb-4">Potencia profesional para creativos y desarrolladores.</p>
           <div class="flex items-center mb-4">
             <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
             <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
@@ -96,21 +155,21 @@
       </div>
 
       <!-- Producto B: ASUS Zenbook 14 -->
-      <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+      <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
         <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
           <img src="../img/ASUS Zenbook 14.png" alt="ASUS Zenbook 14" class="w-full h-full object-cover">
           <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">ASUS Zenbook 14</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">Ligera, potente y diseñada para productividad diaria.</p>
+          <h3 class="font-bold text-xl mb-2 text-gray-800 ">ASUS Zenbook 14</h3>
+          <p class="text-gray-600  mb-4">Ligera, potente y diseñada para productividad diaria.</p>
           <div class="flex items-center mb-4">
             <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
             <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
           </div>
           <div class="justify-between flex items-center">
             <div>
-              <span class="text-3xl font-bold text-black dark:text-white mb-2">$1,199,000</span>
+              <span class="text-3xl font-bold text-black  mb-2">$1,199,000</span>
             </div>
             <button
               class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
@@ -125,14 +184,14 @@
       </div>
 
       <!-- Producto C: HP Pavilion Laptop 17 -->
-      <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+      <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
         <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
           <img src="../img/HP Pavilion Laptop 17.jpg" alt="HP Pavilion Laptop 17" class="w-full h-full object-cover">
           <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">HP Pavilion Laptop 17</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">Pantalla amplia y excelente rendimiento para multitarea.</p>
+          <h3 class="font-bold text-xl mb-2 text-gray-800 ">HP Pavilion Laptop 17</h3>
+          <p class="text-gray-600  mb-4">Pantalla amplia y excelente rendimiento para multitarea.</p>
           <div class="flex items-center mb-4">
             <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
             <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
@@ -155,21 +214,21 @@
       </div>
 
       <!-- Producto D: MSI Modern 13 -->
-      <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+      <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
         <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
           <img src="../img/MSI Modern 13.webp" alt="MSI Modern 13" class="w-full h-full object-cover">
           <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">MSI Modern 13</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">Rendimiento moderno con diseño ultraligero.</p>
+          <h3 class="font-bold text-xl mb-2 text-gray-800 ">MSI Modern 13</h3>
+          <p class="text-gray-600  mb-4">Rendimiento moderno con diseño ultraligero.</p>
           <div class="flex items-center mb-4">
             <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
             <span class="text-gray-500 text-sm ml-2">(112 Reseñas)</span>
           </div>
           <div class="justify-between flex items-center">
             <div>
-              <span class="text-3xl font-bold text-black dark:text-white mb-2">$1,099,000</span>
+              <span class="text-3xl font-bold text-black  mb-2">$1,099,000</span>
             </div>
             <button
               class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
@@ -184,14 +243,14 @@
       </div>
 
       <!-- Producto E: MSI Modern -->
-      <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+      <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
         <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
           <img src="../img/MSI Modern.webp" alt="MSI Modern" class="w-full h-full object-cover">
           <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">MSI Modern</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">Laptop versátil con excelente relación precio-rendimiento.</p>
+          <h3 class="font-bold text-xl mb-2 text-gray-800 ">MSI Modern</h3>
+          <p class="text-gray-600  mb-4">Laptop versátil con excelente relación precio-rendimiento.</p>
           <div class="flex items-center mb-4">
             <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
             <span class="text-gray-500 text-sm ml-2">(94 Reseñas)</span>
@@ -218,24 +277,24 @@
 </section>
 
 <!-- Productos Celulares -->
-<section id="celularesmark" class="productos-destacados py-16 bg-white dark:bg-gray-900">
+<section id="celularesmark" class="productos-destacados py-16 bg-white ">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4 dark:text-white">Celulares</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-lg">Los productos más populares en nuestra tienda.</p>
+        <h2 class="text-4xl font-bold mb-4 ">Celulares</h2>
+        <p class="text-gray-600  text-lg">Los productos más populares en nuestra tienda.</p>
       </div>
   
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid">
   
         <!-- Producto A: Google Pixel 9a -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/Pixel9a.jpg" alt="Google Pixel 9a" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Google Pixel 9a</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Cámara inteligente y rendimiento eficiente con Android puro.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Google Pixel 9a</h3>
+            <p class="text-gray-600  mb-4">Cámara inteligente y rendimiento eficiente con Android puro.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
@@ -258,21 +317,21 @@
         </div>
   
         <!-- Producto B: iPhone 15 Pro -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone 15 Pro" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">iPhone 15 Pro</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">El smartphone más avanzado con chip A17 Pro y diseño de titanio.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">iPhone 15 Pro</h3>
+            <p class="text-gray-600  mb-4">El smartphone más avanzado con chip A17 Pro y diseño de titanio.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
             </div>
             <div class="justify-between flex items-center">
               <div>
-                <span class="text-3xl font-bold text-black dark:text-white mb-2">$4,199,000</span>
+                <span class="text-3xl font-bold text-black  mb-2">$4,199,000</span>
               </div>
               <button
                 class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
@@ -287,14 +346,14 @@
         </div>
   
         <!-- Producto C: Samsung Galaxy S25+ -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/SamsungGalaxyS25+.jpg" alt="Samsung Galaxy S25+" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Samsung Galaxy S25+</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Rendimiento premium y pantalla Dynamic AMOLED 2X de 6.7”.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Samsung Galaxy S25+</h3>
+            <p class="text-gray-600  mb-4">Rendimiento premium y pantalla Dynamic AMOLED 2X de 6.7”.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
@@ -317,21 +376,21 @@
         </div>
   
         <!-- Producto D: Samsung Galaxy S25 Ultra -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/SamsungGalaxyS25UltraS.jpg" alt="Samsung Galaxy S25 Ultra" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Samsung Galaxy S25 Ultra</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Fotografía profesional con zoom 200MP y S-Pen integrado.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Samsung Galaxy S25 Ultra</h3>
+            <p class="text-gray-600  mb-4">Fotografía profesional con zoom 200MP y S-Pen integrado.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(104 Reseñas)</span>
             </div>
             <div class="justify-between flex items-center">
               <div>
-                <span class="text-3xl font-bold text-black dark:text-white mb-2">$5,299,000</span>
+                <span class="text-3xl font-bold text-black  mb-2">$5,299,000</span>
               </div>
               <button
                 class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
@@ -346,14 +405,14 @@
         </div>
   
         <!-- Producto E: Xiaomi 15 Ultra -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/Xiaomi15Ultra.jpg" alt="Xiaomi 15 Ultra" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-10%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Xiaomi 15 Ultra</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Innovación con cámara Leica y pantalla AMOLED 120Hz.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Xiaomi 15 Ultra</h3>
+            <p class="text-gray-600  mb-4">Innovación con cámara Leica y pantalla AMOLED 120Hz.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(95 Reseñas)</span>
@@ -380,24 +439,24 @@
   </section>
   
 <!-- Productos Componentes -->
-<section id="componentesmark" class="productos-destacados py-16 bg-white dark:bg-gray-900">
+<section id="componentesmark" class="productos-destacados py-16 bg-white ">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4 dark:text-white">Componentes</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-lg">Los productos más populares en nuestra tienda.</p>
+        <h2 class="text-4xl font-bold mb-4 ">Componentes</h2>
+        <p class="text-gray-600  text-lg">Los productos más populares en nuestra tienda.</p>
       </div>
   
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productos-grid">
   
         <!-- Producto A -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/Asus Tuf 650w 80 + power.webp" alt="ASUS TUF 650 Power" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-15%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">ASUS TUF 650W Power Supply</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Fuente de poder confiable con certificación 80+ Bronze.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">ASUS TUF 650W Power Supply</h3>
+            <p class="text-gray-600  mb-4">Fuente de poder confiable con certificación 80+ Bronze.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(128 Reseñas)</span>
@@ -415,21 +474,21 @@
         </div>
   
         <!-- Producto B -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/DDR5 16GB Vengeance.webp" alt="DDR5 16GB Vengeance" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Corsair DDR5 16GB Vengeance</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Memoria RAM DDR5 de alto rendimiento para gaming y trabajo intensivo.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Corsair DDR5 16GB Vengeance</h3>
+            <p class="text-gray-600  mb-4">Memoria RAM DDR5 de alto rendimiento para gaming y trabajo intensivo.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(89 Reseñas)</span>
             </div>
             <div class="justify-between flex items-center">
               <div>
-                <span class="text-3xl font-bold text-black dark:text-white mb-2">$359,000</span>
+                <span class="text-3xl font-bold text-black  mb-2">$359,000</span>
               </div>
               <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
                 data-product="DDR5-Vengeance-16GB" data-price="359000" data-id="ddr5-vengeance-16gb"
@@ -439,14 +498,14 @@
         </div>
   
         <!-- Producto C -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/Musetex ATX Case.avif" alt="Musetex ATX Case" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Musetex ATX Case</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Gabinete gamer con panel de vidrio templado y RGB integrado.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Musetex ATX Case</h3>
+            <p class="text-gray-600  mb-4">Gabinete gamer con panel de vidrio templado y RGB integrado.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
@@ -464,21 +523,21 @@
         </div>
   
         <!-- Producto D -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="../img/Nvidia Quatro 420.jpg" alt="Nvidia Quadro 420" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-sm font-bold">NUEVO</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">Nvidia Quadro 420</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Tarjeta gráfica profesional ideal para diseño 3D y renderizado.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">Nvidia Quadro 420</h3>
+            <p class="text-gray-600  mb-4">Tarjeta gráfica profesional ideal para diseño 3D y renderizado.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(102 Reseñas)</span>
             </div>
             <div class="justify-between flex items-center">
               <div>
-                <span class="text-3xl font-bold text-black dark:text-white mb-2">$1,099,000</span>
+                <span class="text-3xl font-bold text-black  mb-2">$1,099,000</span>
               </div>
               <button class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105"
                 data-product="Nvidia-Quadro-420" data-price="1099000" data-id="nvidia-quadro-420"
@@ -488,14 +547,14 @@
         </div>
   
         <!-- Producto E -->
-        <div class="border-2 dark:border-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
+        <div class="border-2  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 product-card product-hover">
           <div class="bg-linear-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center relative overflow-hidden">
             <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=600" alt="RTX 4070 Super" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">-20%</div>
           </div>
           <div class="p-6">
-            <h3 class="font-bold text-xl mb-2 text-gray-800 dark:text-gray-50">NVIDIA RTX 4070 Super</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">Potente GPU para gaming 4K y creación de contenido.</p>
+            <h3 class="font-bold text-xl mb-2 text-gray-800 ">NVIDIA RTX 4070 Super</h3>
+            <p class="text-gray-600  mb-4">Potente GPU para gaming 4K y creación de contenido.</p>
             <div class="flex items-center mb-4">
               <div class="text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
               <span class="text-gray-500 text-sm ml-2">(156 Reseñas)</span>
@@ -519,7 +578,51 @@
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer id="contacto" class="bg-gray-900  text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-linear-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"> 
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/> 
+                            </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">TechStore Pro</h3>
+                </div>
+                <p class="text-gray-400 mb-4">Tu tienda de tecnologia de confianza con los mejores productos y precios.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
+                <ul class="space-y-2 text-gray-400">
+                <li><a href="../pages/index.html" class="hover:text-white transition-colors duration-200">Inicio</a></li>
+                <li><a href="../pages/productos.html" class="hover:text-white transition-colors duration-200">Productos</a></li>
+                <li><a href="../pages/carrito.html" class="hover:text-white transition-colors duration-200">Carrito</a></li>
+            </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Atención</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Contactos</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Envios</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Devoluciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Términos</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Privacidad</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors duration-200">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TechStore Pro. Todos Los Derechos Reservados</p>
+        </div>
+    </div>
+ </footer>
     
+<script defer src="./java/perfil.js"></script>
 </body>
 </html>

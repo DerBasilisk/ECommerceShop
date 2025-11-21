@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded',function(){
         console.log('201 - Inicio De Sesion Exitante 🥵');
 
         //Guardar la ip de estos weones
-    localStorage.setItem("sesion activa", "true");
+    localStorage.setItem("sesionActiva", "true");
     localStorage.setItem("usuario",JSON.stringify({
         userId:resultado.usuario.userId,
         nombre:resultado.usuario.nombre,

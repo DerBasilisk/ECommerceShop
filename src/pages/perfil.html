@@ -71,81 +71,187 @@
     
 
     <!-- Cuerpo -->
-    <main>
-        <!-- Buscador -->
-        <div class="bg-white  rounded-xl shadow-lg p-6 mb-6">
-            <!-- Barra Busqueda -->
-            <div class="mb-6">
-                <div class="relative">
-                    <input type="text" 
-                    placeholder="Buscar productos..." 
-                    class="  w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200" 
-                    id="search-input">
-                    <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
-            </div>
+<main>
+    <section id="perfil-usuario" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300">
 
-            <!-- Filtros -->
-             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Categorias -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700  mb-2">Categoria</label>
-                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 " id="category-filter-type">
-                        <option value="laptops">Laptops</option>
-                        <option value="celulares">Celulares</option>
-                        <option value="componentes">Componentes</option>
-                        <option value="accesorios">Accesorios</option>
-                    </select>
+                <h3 class="text-2xl font-bold mb-6 text-gray-900">Perfil De Usuario</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Columna izquierda: foto y nombre -->
+                    <div class="flex flex-col items-center">
+                        <!-- Foto de perfil -->
+                        <div id="perfil-foto" class="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden shadow-md">
+                            <!-- Imagen (en trabajo) -->
+                            <img id="foto-img" src="..." alt="Sin foto" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Nombre y Apellido -->
+                        <div class="flex gap-2">
+                        <h4 id="perfil-nombre" class="text-xl font-semibold mt-4 text-gray-800">Nombre</h4>
+                        <h4 id="perfil-apellido" class="text-xl font-semibold mt-4 text-gray-800">Apellido</h4>
+                        </div>
+                        
+                        <!-- Id usuario -->
+                        <p id="perfil-id" class="text-gray-500 text-sm mt-1">Id</p>
+                    </div>
+
+
+                    <!-- Columna derecha: datos -->
+                    <div class="md:col-span-2">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            <!-- Edad -->
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                                <p class="text-sm text-gray-500">Edad</p>
+                                <p id="perfil-edad" class="text-lg font-medium text-gray-900">--</p>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                                <p class="text-sm text-gray-500">Teléfono</p>
+                                <p id="perfil-telefono" class="text-lg font-medium text-gray-900">--</p>
+                            </div>
+
+                            <!-- Correo -->
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                                <p class="text-sm text-gray-500">Correo Electrónico</p>
+                                <p id="perfil-correo" class="text-lg font-medium text-gray-900">--</p>
+                            </div>
+
+                            <!-- Contraseña -->
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                                <p class="text-sm text-gray-500">Contraseña</p>
+                                <p id="perfil-passwords" class="text-lg font-medium text-gray-900">--</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <!-- Precio -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700  mb-2">Rango de Precio</label>
-                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 " id="category-filter-price">
-                        <option value="">Cualquier Precio</option>
-                        <option value="0-500000">$0 - $500,000</option>
-                        <option value="500000-1500000">$500,000 - $1,500,000</option>
-                        <option value="1500000-3000000">$1,500,000 - $3,000,000</option>
-                        <option value="3000000">$3,000,000</option>
-                    </select>
+
+                <!-- Botones -->
+                <div class="flex gap-4 pt-8">
+
+                    <button id="btn-editar-perfil" 
+                        class="h-10 bg-white rounded-md px-4 border-2 border-blue-200 hover:scale-105 hover:text-blue-600 hover:border-gray-400 transition duration-200 active:border-blue-600">
+                        Editar Perfil
+                    </button>
+
+                    <button id="btn-borrar-cuenta" 
+                        class="h-10 bg-red-500 text-white rounded-md px-4 border-2 border-gray-200 hover:scale-105 hover:bg-gray-900 hover:text-red-400 hover:border-gray-400 transition duration-200 active:border-red-600">
+                        Borrar Cuenta
+                    </button>
+
                 </div>
-                <!-- Orden -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700  mb-2">Ordenar Por</label>
-                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 " id="category-filter-order">
-                        <option value="relevance">Relevancia</option>
-                        <option value="price-asc">Precio: Menor a Mayor</option>
-                        <option value="price-desc">Precio: Mayor a Menor</option>
-                        <option value="name">Nombre A-Z</option>
-                        <option value="name">Nombre Z-A</option>
-                        <option value="newest">Más Nuevos</option>
-                        <option value="newest">Más Antiguos</option>
-                    </select>
-                </div>
+
             </div>
+        </div>
+    </section>
+
+    <!-- Modal Editar Perfil -->
+<div id="modal-editar-perfil" 
+class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+<div class="bg-white w-full max-w-lg p-6 rounded-xl shadow-2xl">
+   
+   <h2 class="text-xl font-bold mb-4 text-gray-800">Editar Perfil</h2>
+
+   <form id="form-editar-perfil" class="grid grid-cols-1 gap-4">
+
+       <div>
+           <label class="text-sm text-gray-600">Nombre</label>
+           <input id="edit-nombre" type="text" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <div>
+           <label class="text-sm text-gray-600">Apellido</label>
+           <input id="edit-apellido" type="text" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <div>
+           <label class="text-sm text-gray-600">Edad</label>
+           <input id="edit-edad" type="number" min="1" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <div>
+           <label class="text-sm text-gray-600">Teléfono</label>
+           <input id="edit-telefono" type="text" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <div>
+           <label class="text-sm text-gray-600">Correo</label>
+           <input id="edit-correo" type="email" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <div>
+           <label class="text-sm text-gray-600">Contraseña</label>
+           <input id="edit-password" type="password" 
+                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
+       </div>
+
+       <!-- Botones -->
+       <div class="flex justify-end gap-3 pt-4">
+
+           <button type="button" id="cancelar-editar"
+                   class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+               Cancelar
+           </button>
+
+           <button type="submit"
+                   class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+               Guardar Cambios
+           </button>
+
+       </div>
+
+   </form>
+   
+</div>
+</div>
+
+
+<!-- Modal Eliminar Cuenta -->
+<div id="modal-eliminar-cuenta" 
+     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+    <div class="bg-white w-full max-w-md p-6 rounded-xl shadow-lg">
+
+        <h2 class="text-xl font-bold text-red-600 mb-3">¿Eliminar Cuenta?</h2>
+
+        <p class="text-gray-700 mb-6">
+            Esta acción es <span class="font-semibold text-red-500">irreversible</span>. 
+            Se borrarán todos tus datos del sistema.
+        </p>
+
+        <div class="flex justify-end gap-3">
+
+            <button id="cancelar-eliminar"
+                    class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+                Cancelar
+            </button>
+
+            <button id="confirmar-eliminar"
+                    class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
+                Eliminar
+            </button>
+
         </div>
 
-    <!-- Producto -->
-    <div>
-        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6" id="products-grid">
-            
-        </div>
-        
-            <!-- Barra De Pestañas -->
-            <div class="mt-12 mb-4 flex justify-center">
-                <nav class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 ">
-                  <button disabled class="px-3 py-1 text-gray-400 cursor-not-allowed">Anterior</button>
-                  <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800">1</button>
-                  <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700  hover:bg-blue-100 ">2</button>
-                  <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700  hover:bg-blue-100 ">3</button>
-                  <button class="px-3 py-1 text-gray-700  hover:text-blue-600">Siguiente</button>
-                </nav>
-            </div>
-        </div>
     </div>
-          
+</div>
+
 </main>
+
 
 <!-- Pie De Pagina -->
 <footer id="contacto" class="bg-gray-900  text-white py-12">
@@ -199,6 +305,7 @@
     </div>
 <!-- Agregar defer para que espere el DOM -->
 <script defer src="./java/perfil.js"></script>
-<script defer src="./java/productos.js"></script>
+<script defer src="./java/userperfil.js"></script>
+<script src="./java/modales.js"></script>
 </body>
 </html>
