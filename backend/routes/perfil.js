@@ -1,9 +1,11 @@
 import express from "express";
-import { obtenerperfil } from "../controllers/perfil.js";
+import { obtenerPerfil , updatePerfil , borrarPerfil} from "../controllers/perfil.js";
 
 const router = express.Router();
 
-router.post('/obtener',obtenerperfil);
+router.post('/obtener',obtenerPerfil);
+router.put('/update', updatePerfil);
+router.delete('/borrar', borrarPerfil);
 
 export default router;
 
