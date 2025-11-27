@@ -72,82 +72,94 @@
 
     <!-- Cuerpo -->
 <main>
-    <section id="perfil-usuario" class="py-16 bg-gray-50">
+    <section id="perfil-usuario" class="py-16 bg-gray-50 mb-15">
         <div class="container mx-auto px-4">
-            <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300">
-
-                <h3 class="text-2xl font-bold mb-6 text-gray-900">Perfil De Usuario</h3>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 h-170">
 
                     <!-- Columna izquierda: foto y nombre -->
-                    <div class="flex flex-col items-center">
-                        <!-- Foto de perfil -->
-                        <div id="perfil-foto" class="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden shadow-md">
-                            <!-- Imagen (en trabajo) -->
-                            <img id="foto-img" src="..." alt="Sin foto" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Nombre y Apellido -->
-                        <div class="flex gap-2">
-                        <h4 id="perfil-nombre" class="text-xl font-semibold mt-4 text-gray-800">Nombre</h4>
-                        <h4 id="perfil-apellido" class="text-xl font-semibold mt-4 text-gray-800">Apellido</h4>
-                        </div>
+                    <div class="flex items-center mb-6">
+                        <div class="flex justify-center items-center gap-3">
+                        <button id="user-menu-btn" 
+                            class="w-32 h-32 rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-white flex items-center justify-center font-bold text-xl shadow-md hover:scale-105 transition-transform">
+                        <span id="user-avat" class="text-5xl"></span>
+                        </button>
+                        <div>
+                            <!-- Nombre y Apellido -->
+                            <div class="flex gap-2">
+                            <h4 id="perfil-nombre" class="text-xl font-semibold mt-4 text-gray-800">Nombre</h4>
+                            <h4 id="perfil-apellido" class="text-xl font-semibold mt-4 text-gray-800">Apellido</h4>
+                            </div>
+                            
+                            <!-- Id usuario -->
+                            <p id="perfil-correo" class="text-gray-500 text-sm mt-1">correo</p>
+                            </div></div>
                         
-                        <!-- Id usuario -->
-                        <p id="perfil-id" class="text-gray-500 text-sm mt-1">Id</p>
                     </div>
 
+                    <div class="w-full h-0.5 bg-gray-300 rounded-2xl mb-5">
+
+                    </div>
 
                     <!-- Columna derecha: datos -->
-                    <div class="md:col-span-2">
+                    <div class="md:col-span-2 w-full">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
 
-                            <!-- Edad -->
-                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
-                                <p class="text-sm text-gray-500">Edad</p>
-                                <p id="perfil-edad" class="text-lg font-medium text-gray-900">--</p>
+                            <div class="grid grid-cols-2">
+                            
+                            <!-- nombre -->
+                            <div class="p-4 rounded-lg">
+                                <p class="text-sm text-black mb-1">Nombre</p>
+                                <p id="user-nombre" class="border-2 border-gray-200 rounded-xl h-12 p-2 bg-gray-50 text-lg font-medium text-gray-900">--</p>
                             </div>
 
-                            <!-- Teléfono -->
-                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
-                                <p class="text-sm text-gray-500">Teléfono</p>
-                                <p id="perfil-telefono" class="text-lg font-medium text-gray-900">--</p>
+                            <!-- apellido -->
+                            <div class="p-4 rounded-lg">
+                                <p class="text-sm text-black mb-1">Apellido</p>
+                                <p id="user-apellido" class="border-2 border-gray-200 rounded-xl h-12 p-2 bg-gray-50 text-lg font-medium text-gray-900">--</p>
                             </div>
-
+                            </div>
+                           
                             <!-- Correo -->
-                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
-                                <p class="text-sm text-gray-500">Correo Electrónico</p>
-                                <p id="perfil-correo" class="text-lg font-medium text-gray-900">--</p>
+                            <div class="p-4 rounded-lg w-full">
+                                <p class="text-sm text-black mb-1">Correo Electrónico</p>
+                                <p id="user-correo" class="border-2 border-gray-200 rounded-xl h-12 p-2 bg-gray-50 text-lg font-medium text-gray-900">--</p>
                             </div>
 
-                            <!-- Contraseña -->
-                            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
-                                <p class="text-sm text-gray-500">Contraseña</p>
-                                <p id="perfil-passwords" class="text-lg font-medium text-gray-900">--</p>
+                            <!-- telefono -->
+                            <div class="p-4 rounded-lg w-full">
+                                <p class="text-sm text-black mb-1">Telefono</p>
+                                <p id="user-telefono" class="border-2 border-gray-200 rounded-xl h-12 p-2 bg-gray-50 text-lg font-medium text-gray-900">--</p>
                             </div>
 
                         </div>
 
-                    </div>
+                    <div class="w-full h-0.5 bg-gray-300 rounded-2xl mb-2"></div>
 
-                </div>
-
-                <!-- Botones -->
-                <div class="flex gap-4 pt-8">
-
-                    <button id="btn-editar-perfil" 
-                        class="h-10 bg-white rounded-md px-4 border-2 border-blue-200 hover:scale-105 hover:text-blue-600 hover:border-gray-400 transition duration-200 active:border-blue-600">
+                    <div class="p-3 gap-2 grid grid-cols-1">
+                        <button id="btn-editar-perfil" 
+                        class="h-12 w-full bg-linear-to-r hover:scale-105 text-white from-blue-600 to-purple-600 rounded-md px-4 border-2 hover:scale-105transition duration-200 active:border-blue-600">
                         Editar Perfil
                     </button>
-
-                    <button id="btn-borrar-cuenta" 
-                        class="h-10 bg-red-500 text-white rounded-md px-4 border-2 border-gray-200 hover:scale-105 hover:bg-gray-900 hover:text-red-400 hover:border-gray-400 transition duration-200 active:border-red-600">
-                        Borrar Cuenta
+                    <div class="grid-cols-3 gap-2 grid">
+                        <button id="btn-borrar-cuenta" 
+                        class="h-12 w-full bg-linear-to-r hover:scale-105 text-white from-red-600 to-red-700 rounded-md px-4 border-2 hover:scale-105transition duration-200 active:border-blue-600">
+                        Borra Cuenta
                     </button>
+                    <button id="btn-cancelar" 
+                        class="h-12 w-full bg-linear-to-r hover:scale-105 text-white from-gray-600 to-gray-700 rounded-md px-4 border-2 hover:scale-105transition duration-200 active:border-blue-600">
+                        Cancelar
+                    </button>
+                    <button id="btn-guardar-perfil" 
+                        class="h-12 w-full bg-linear-to-r hover:scale-105 text-white from-green-600 to-green-700 rounded-md px-4 border-2 hover:scale-105transition duration-200 active:border-blue-600">
+                        Guardar Cambios
+                    </button>
+                    </div>
+                    </div>
+                    
+                
 
-                </div>
+                
 
             </div>
         </div>
@@ -157,47 +169,53 @@
 <div id="modal-editar-perfil" 
 class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
 
-<div class="bg-white w-full max-w-lg p-6 rounded-xl shadow-2xl">
+<div class="bg-linear-to-br from-blue-50 to-purple-50 w-full max-w-lg p-6 rounded-xl shadow-2xl">
    
    <h2 class="text-xl font-bold mb-4 text-gray-800">Editar Perfil</h2>
 
    <form id="form-editar-perfil" class="grid grid-cols-1 gap-4">
 
-       <div>
-           <label class="text-sm text-gray-600">Nombre</label>
-           <input id="edit-nombre" type="text" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <label class="text-sm text-gray-600 font-bold">Nombre</label>
+            <input id="edit-nombre" type="text" 
+                   class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+        </div>
+ 
+        <div>
+         <label class="text-sm text-gray-600 font-bold">Apellido</label>
+            <input id="edit-apellido" type="text" 
+            class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+         </div>
+    </div>
+       
+    <div class="grid grid-cols-3 gap-4">
+        <div class="col-start-1 col-end-1">
+            <label class="text-sm text-gray-600 font-bold w-20">Edad</label>
+               <input id="edit-edad" type="number" min="1" 
+               class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+            </div>
+    
+           <div class="col-start-2 col-end-4">
+            <label class="text-sm text-gray-600 font-bold">Teléfono</label>
+               <input id="edit-telefono" type="text" 
+               class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+            </div>
+
+    </div>
+    
 
        <div>
-           <label class="text-sm text-gray-600">Apellido</label>
-           <input id="edit-apellido" type="text" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
-
-       <div>
-           <label class="text-sm text-gray-600">Edad</label>
-           <input id="edit-edad" type="number" min="1" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
-
-       <div>
-           <label class="text-sm text-gray-600">Teléfono</label>
-           <input id="edit-telefono" type="text" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
-
-       <div>
-           <label class="text-sm text-gray-600">Correo</label>
+        <label class="text-sm text-gray-600 font-bold">Correo</label>
            <input id="edit-correo" type="email" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
+           class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+        </div>
 
        <div>
-           <label class="text-sm text-gray-600">Contraseña</label>
+        <label class="text-sm text-gray-600 font-bold">Contraseña</label>
            <input id="edit-password" type="password" 
-                  class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-       </div>
+           class="w-full p-2 border-2 rounded-md focus:ring-2 focus:ring-blue-500 bg-white border-gray-200">
+        </div>
 
        <!-- Botones -->
        <div class="flex justify-end gap-3 pt-4">
@@ -208,7 +226,7 @@ class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justi
            </button>
 
            <button type="submit"
-                   class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                   class="px-4 py-2 bg-linear-to-tl from-blue-500 to bg-purple-500 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition duration-200">
                Guardar Cambios
            </button>
 

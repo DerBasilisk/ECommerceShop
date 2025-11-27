@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.warn("⚠️ [DEBUG] No se encontró #user-menu-container en esta página");
         return;
     }
-0
+
     if (!sesionActiva) {
         console.log("ℹ️ [DEBUG] No hay sesión activa");
         return;
@@ -71,18 +71,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log("👁️ [DEBUG] Botón de login ocultado");
     }
 
+    const avat = `${usuario.nombre[0]}${usuario.apellido[0]}`.toUpperCase();
+    document.getElementById("user-avat").textContent = avat;
     
 
     console.log("🎨 [DEBUG] Menú de usuario creado");
 
     // 5. INSERTAR DATOS DEL USUARIO
     document.getElementById("perfil-nombre").textContent = usuario.nombre;
+    document.getElementById("user-nombre").textContent = usuario.nombre;
+
     document.getElementById("perfil-apellido").textContent = usuario.apellido;
+    document.getElementById("user-apellido").textContent = usuario.apellido;
+
     document.getElementById("perfil-correo").textContent = usuario.correo;
-    document.getElementById("perfil-id").textContent = usuario.userId;
-    document.getElementById("perfil-telefono").textContent = usuario.telefono;
-    document.getElementById("perfil-passwords").textContent = "***********";
-    document.getElementById("perfil-edad").textContent = usuario.edad;
+    document.getElementById("user-correo").textContent = usuario.correo;
+
+    document.getElementById("user-telefono").textContent = usuario.telefono;
 
     console.log("📝 [DEBUG] Datos de usuario insertados en el DOM");
 
