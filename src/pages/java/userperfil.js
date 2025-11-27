@@ -154,10 +154,26 @@ document.addEventListener("DOMContentLoaded", async () => {
                 usuarioLS.correo = nuevosDatos.correo;
                 localStorage.setItem("usuario", JSON.stringify(usuarioLS));
             }
-    
-            alert("✅ Perfil actualizado correctamente");
+
+            const toastup = document.getElementById("update-toast");
+            if (toastup) {
+                toastup.classList.remove("hidden");
+                setTimeout(() => toastup.classList.add("opacity-100"), 20);
+
+                setTimeout(() => {
+                    toastup.classList.remove("opacity-100");
+                    setTimeout(() => {
+                        window.location.href = "../pages/login.html";
+                    }, 500);
+                }, 1800);
+            } else {
+                // Si no hay toast, redirigir inmediatamente
+                window.location.href = "../pages/login.html";
+            }
             await cargarPerfil();
-            location.reload();
+            setTimeout(() => {
+                location.reload();
+            }, 2000); // 3000 ms = 3 segundos
     
         } catch (error) {
             console.error("❌ Error al guardar cambios:", error);
