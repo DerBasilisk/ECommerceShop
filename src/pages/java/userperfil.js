@@ -184,14 +184,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
 
     // ========== ELIMINAR CUENTA ==========
-    async function eliminarCuenta() {
-        const password = prompt("⚠️ Por seguridad, ingresa tu contraseña para confirmar la eliminación:");
-
-        if (!password) {
-            alert("Eliminación cancelada");
-            return;
-        }
-
+    async function eliminarCuenta(password) {
         try {
             const res = await fetch("http://localhost:8081/api/perfil/borrar", {
                 method: "DELETE",
@@ -201,31 +194,63 @@ document.addEventListener("DOMContentLoaded", async () => {
                     passwords: password 
                 })
             });
-
+    
             const data = await res.json();
-
+    
             if (!res.ok) {
                 throw new Error(data.message || "Error al eliminar cuenta");
             }
-
-            alert("✅ Cuenta eliminada correctamente");
-            localStorage.clear();
-            window.location.href = "../pages/login.html";
-
+    
+            // Ocultar modal
+            document.getElementById("modal-eliminar-cuenta").classList.add("hidden");
+    
+            // Mostrar toast de borrado
+            const toastdel = document.getElementById("delete-toast");
+            toastdel.classList.remove("hidden");
+            setTimeout(() => toastdel.classList.add("opacity-100"), 20);
+    
+            setTimeout(() => {
+                toastdel.classList.remove("opacity-100");
+                setTimeout(() => {
+                    localStorage.clear();
+                    window.location.href = "../pages/login.html";
+                }, 500);
+            }, 1800);
+            
+    
         } catch (error) {
             console.error("❌ Error al eliminar cuenta:", error);
             alert(`Error: ${error.message}`);
         }
     }
+    
+
+    // ---- MODAL ELIMINAR CUENTA ----
+
+document.getElementById("cancelar-eliminar").addEventListener("click", () => {
+    document.getElementById("modal-eliminar-cuenta").classList.add("hidden");
+});
+
+// Cuando el usuario confirma
+document.getElementById("confirmar-eliminar").addEventListener("click", async () => {
+    const password = document.getElementById("confirm-password").value.trim();
+
+    if (!password) {
+        alert("Debes ingresar tu contraseña");
+        return;
+    }
+
+    await eliminarCuenta(password);
+});
+
 
     // ========== EVENT LISTENERS ==========
     elementos.btnEditar.addEventListener("click", activarModoEdicion);
     elementos.btnCancelar.addEventListener("click", cancelarEdicion);
     elementos.btnGuardar.addEventListener("click", guardarCambios);
     elementos.btnBorrar.addEventListener("click", () => {
-        if (confirm("⚠️ ¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.")) {
-            eliminarCuenta();
-        }
+        document.getElementById("modal-eliminar-cuenta").classList.remove("hidden");
+    
     });
 
     // ========== INICIALIZAR ==========

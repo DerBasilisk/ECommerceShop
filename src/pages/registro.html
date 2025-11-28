@@ -153,17 +153,20 @@
                     </svg></div>
                      
 
-            <label for="">Confirmar Contraseña</label>
-                <input type="password" placeholder="**********" 
+            <label for="passwordcheck">Confirmar Contraseña</label>
+                <input type="password" id="confirmPassword" placeholder="**********" 
                   class="bg-white border-gray-300 border rounded-lg h-10 mb-2 px-3">
 
             <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 text-left p">
               <div class="mb-10">        
-                <div><input type="checkbox" id="marcador">
-                <label for="marcador">
+                <div><input type="checkbox" id="aceptoTerminos">
+                <label for="aceptoTerminos">
                   Acepto los <span class="text-blue-600 font-bold">terminos y condiciones</span> y la <span class="text-blue-600 font-bold">politica de privacidad</span>
                 </label>
               </div><br>
+
+              <p id="form-error" class="text-red-500 text-sm mb-3 hidden"></p>
+
               <button class="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white h-12 rounded-lg transition-all duration-200 add-to-cart-btn transform hover:scale-105">
                 Crear Cuenta
               </button>
@@ -238,6 +241,11 @@
     </div>
  </footer>
 
+ <div id="creation-toast"
+ class="hidden fixed top-5 right-5 bg-blue-600 text-white px-5 py-3 rounded-xl shadow-2xl z-9999
+   opacity-0 transition-opacity duration-500 text-sm font-semibold">
+      Cuenta Creada
+</div>
 <script defer src="./java/perfil.js"></script>
 <script src="./java/toggle.js"></script>
 <script src="./java/register.js"></script>
