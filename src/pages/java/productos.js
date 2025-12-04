@@ -39,10 +39,10 @@ async function cargarproductos() {
             </div>
   
             <div class="flex space-x-2">
-              <button class="ver-detalles-btn bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition duration-300 flex-1 text-sm">
+              <button class="ver-detalles-btn bg-linear-to-br from-green-500 to-green-600 text-white px-3 py-2 rounded-lg hover:from-green-900 hover:to-green-800 active:from-green-600 active:to-green-600  transition duration-300 flex-1 text-sm">
                 Ver Detalles
               </button>
-              <button class="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex-1 text-sm">
+              <button class="add-to-cart bg-linear-to-br from-blue-500 to-blue-600 text-white px-3 py-2 rounded-lg hover:from-blue-800 hover:to-blue-900 active:from-blue-600 active:to-blue-600  transition duration-300 flex-1 text-sm"  data-id="${producto.productId}">
                 Comprar
               </button>
             </div>
@@ -62,3 +62,41 @@ cargarproductos();
 setInterval(() => {
     cargarproductos();
 }, 5000);
+
+//carrito conchetumare
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+      const id = e.target.getAttribute("data-id");
+      
+      const productoCard = e.target.closest(".product-card");
+      
+      const producto = {
+          id: id,
+          nombre: productoCard.querySelector("h3").textContent,
+          descripcion: productoCard.querySelector(".descripcion-producto").textContent,
+          precio: Number(productoCard.dataset.price),
+          imagen: productoCard.querySelector("img").src,
+          descripcion: productoCard.querySelector("p").textContent
+      };
+
+      agregarAlCarrito(producto);
+      console.log("🛒 Producto agregado al carrito:", producto);
+  }
+});
+
+
+
+function agregarAlCarrito(producto) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const existente = carrito.find(item => item.id == producto.id);
+
+  if (existente) {
+      existente.cantidad++;
+  } else {
+      carrito.push({ ...producto, cantidad: 1 });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
