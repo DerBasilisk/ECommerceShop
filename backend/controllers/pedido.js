@@ -2,7 +2,7 @@ import Pedido from "../models/pedido.js";
 
 export const crearPedido = async (req, res) => {
   try {
-    const { userID, cantidad, productos, precio, ubicacion, postal, estado } = req.body;
+    const { userID, cantidad, productos, precio, ubicacion, direccion, postal, estado } = req.body;
 
     // Valalidar
     if (!userID || !productos || !precio || !ubicacion || !postal) {
@@ -23,6 +23,7 @@ export const crearPedido = async (req, res) => {
       productos,
       precio,
       ubicacion,
+      direccion,
       postal,
       estado: estado || 'pendiente'
     });

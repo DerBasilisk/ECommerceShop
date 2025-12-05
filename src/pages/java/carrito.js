@@ -31,7 +31,7 @@ function cargarCarrito() {
 
                                 <div class="datos-cart row-start-1 row-end-1">
                                     <h3 class="name-prod-cart font-bold">${producto.nombre}</h3>
-                                    <p class="text-sm text-gray-800 mb-4">${producto.descripcion}</p>
+                                    <p class="desc-prod-cart text-sm text-gray-800 mb-4">${producto.descripcion}</p>
 
                                 </div>
                                 

@@ -15,6 +15,7 @@ const pedidoSchema = new mongoose.Schema(
     precio: { type: Number, required: true, min: 0 },
     fecha: { type: Date, default: Date.now },
     ubicacion: { type: String, required: true },
+    direccion: { type: String, required: true },
     postal: { type: String, required: true },
     estado: {type: String, enum: ['pendiente', 'procesando', 'enviado', 'entregado', 'cancelado'], default: 'pendiente'}
   },
