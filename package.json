@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch",
-    "update": "git add . && git commit -m \"auto-update\" && git push"
+    "update": "git add . && git commit -m \"auto-update\" && git push",
+    "build":  "npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --minify"
   },
   "keywords": [],
   "author": "",
