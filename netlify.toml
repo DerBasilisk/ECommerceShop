@@ -5,4 +5,4 @@
 [[redirects]]
     from = "/*"
     to = "/pages/index.html"
-    status = 200
+    status = 200 
