@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         console.log("📡 [DEBUG] Solicitando perfil al backend...");
         
-        const res = await fetch("http://localhost:8081/api/perfil/obtener", {
+        const res = await fetch("https://e-commerce-smlw.onrender.com/api/perfil/obtener", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             // ✅ CAMBIO: Enviar "correo" en lugar de "email"

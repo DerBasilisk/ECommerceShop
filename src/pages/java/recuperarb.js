@@ -21,7 +21,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         return;
     }
 
-    const response = await fetch("http://localhost:8081/api/Recuperar/cambiar-passwords", {
+    const response = await fetch("https://e-commerce-smlw.onrender.com/api/Recuperar/cambiar-passwords", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

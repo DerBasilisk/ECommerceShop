@@ -36,9 +36,21 @@ function cargarCarrito() {
                                 </div>
                                 
                                 <div class="controles-cart row-start-2 row-end-2">
-                                    <p class="id-prod-cart font-bold text-blue-600"><span class="text-black">Precio: </span> $${producto.precio}</p>
-                                    <p class="cant-prod-cart font-bold text-blue-600"><span class="text-black">Cantidad: </span>${producto.cantidad}</p>
+                                <p class="id-prod-cart font-bold text-blue-600">
+                                    <span class="text-black">Precio: </span> $${producto.precio}
+                                </p>
+
+                                <div class="flex items-center gap-2 mt-2">
+                                    <button class="restar bg-red-500 text-white px-2 rounded" data-id="${producto.id}">-</button>
+                                    <span class="font-bold">${producto.cantidad}</span>
+                                    <button class="sumar bg-green-500 text-white px-2 rounded" data-id="${producto.id}">+</button>
                                 </div>
+
+                                <button class="eliminar w-full mt-3 bg-red-600 text-white rounded px-2 py-1" data-id="${producto.id}">
+                                    Eliminar producto
+                                </button>
+                            </div>
+
                             </div>
                         </div>
                     </div>
@@ -51,3 +63,57 @@ function cargarCarrito() {
 
 // Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", cargarCarrito);
+document.addEventListener("click", function(e) {
+
+    // Sumar
+    if (e.target.classList.contains("sumar")) {
+        const id = e.target.getAttribute("data-id");
+        actualizarCantidad(id, "sumar");
+    }
+
+    // Restar
+    if (e.target.classList.contains("restar")) {
+        const id = e.target.getAttribute("data-id");
+        actualizarCantidad(id, "restar");
+    }
+
+    // Eliminar producto
+    if (e.target.classList.contains("eliminar")) {
+        const id = e.target.getAttribute("data-id");
+        eliminarProducto(id);
+    }
+
+    // Vaciar carrito
+    if (e.target.id === "vaciar-carrito") {
+        vaciarCarrito();
+    }
+});
+
+
+function actualizarCantidad(id, accion) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    carrito = carrito.map(p => {
+        if (p.id === id) {
+            if (accion === "sumar") p.cantidad++;
+            if (accion === "restar" && p.cantidad > 1) p.cantidad--;
+        }
+        return p;
+    });
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    cargarCarrito();
+}
+
+function eliminarProducto(id) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito = carrito.filter(p => p.id !== id);
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    cargarCarrito();
+}
+
+function vaciarCarrito() {
+    localStorage.removeItem("carrito");
+    cargarCarrito();
+}

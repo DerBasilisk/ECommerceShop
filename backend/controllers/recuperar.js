@@ -70,7 +70,7 @@ export const solicitarCodigo = async(req,res)=>{
                                 border-radius: 10px;
                                 text-align: center;
                                 margin: 30px 0;">
-                        <h1 style="color: black;
+                        <h1 style="color: white;
                                    font-size: 36px;
                                    letter-spacing: 8px;
                                    margin: 0;
