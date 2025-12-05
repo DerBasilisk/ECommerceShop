@@ -5,6 +5,7 @@ async function cargarproductos() {
       const productos = await response.json();
   
       const grid = document.getElementById("products-grid");
+      if (!grid) return; // <-- evita el error cuando no existe el grid
   
       grid.innerHTML = productos
         .map(
@@ -58,32 +59,49 @@ async function cargarproductos() {
     }
   }
   
-cargarproductos();
-setInterval(() => {
-    cargarproductos();
-}, 5000);
+// solo inicializa si existe el contenedor
+if (document.getElementById("products-grid")) {
+  cargarproductos();
+  setInterval(cargarproductos, 5000);
+}
 
 //carrito conchetumare
+
+function mostrarToastCarrito() {
+  const toast = document.getElementById("cart-toast");
+
+  toast.classList.remove("hidden");
+  setTimeout(() => toast.classList.add("opacity-100"), 10);
+
+  // Ocultar después de 2.5 segundos
+  setTimeout(() => {
+      toast.classList.remove("opacity-100");
+      setTimeout(() => toast.classList.add("hidden"), 500);
+  }, 2500);
+}
+
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("add-to-cart")) {
       const id = e.target.getAttribute("data-id");
-      
+
       const productoCard = e.target.closest(".product-card");
-      
+
       const producto = {
           id: id,
           nombre: productoCard.querySelector("h3").textContent,
-          descripcion: productoCard.querySelector(".descripcion-producto").textContent,
           precio: Number(productoCard.dataset.price),
           imagen: productoCard.querySelector("img").src,
           descripcion: productoCard.querySelector("p").textContent
       };
 
       agregarAlCarrito(producto);
+      mostrarToastCarrito();   // ✔ TOAST
+
       console.log("🛒 Producto agregado al carrito:", producto);
   }
 });
+
 
 
 
