@@ -8,6 +8,11 @@ const userSchema = new mongoose.Schema({
   telefono: { type: String, required: true, maxlength: 12 },  
   correo: { type: String, required: true, unique: true },
   passwords: { type: String, required: true, minlength: 10 },
+  rol: {type: String, enum: ['user','admin'],
+    default: 'user'
+  },
+  codigoRecuperacion: String,
+  codigoExpiracion: Date
 });
 
 const User = mongoose.model("User", userSchema, "user");

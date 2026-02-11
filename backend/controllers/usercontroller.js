@@ -25,7 +25,8 @@ export const registraruser = async (req, res) => {
             edad,
             telefono,
             correo,
-            passwords: hashedPassword
+            passwords: hashedPassword,
+            rol: "user"
         });
 
         await newuser.save();

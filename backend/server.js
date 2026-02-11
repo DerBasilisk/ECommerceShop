@@ -7,6 +7,7 @@ import LoginRouter from "./routes/login.js";
 import PerfilRouter from "./routes/perfil.js";
 import RecuperarPassword from "./routes/recuperar.js"
 import PedidosRouter from "./routes/pedido.js"
+import adminRoutes from "./routes/admin.js"
 
 const app = express();
 
@@ -27,5 +28,6 @@ app.use("/api/login", LoginRouter);
 app.use("/api/perfil", PerfilRouter);
 app.use("/api/Recuperar", RecuperarPassword);
 app.use("/api/pedidos", PedidosRouter);
+app.use("/api/admin", adminRoutes);
 
 app.listen(8081, () => console.log('Servidor corriendo en https://e-commerce-smlw.onrender.com'));
