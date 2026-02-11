@@ -15,7 +15,7 @@ export const obtenerPerfil = async(req,res)=>{
     
     const usuario = await user.findOne({correo:email}).select('-passwords'); 
     if (!usuario){
-        return res.status(400).json({message:"Usuario No Encontrado"});
+        return res.status(400).json({message:"Usuario No Encontrado (001)"});
     }
     res.status(200).json({
         usuario:{
@@ -50,7 +50,7 @@ export const updatePerfil = async (req, res) => {
         ).select("-passwords");
 
         if (!usuarioActualizado) {
-            return res.status(404).json({ message: "Usuario no encontrado" });
+            return res.status(404).json({ message: "Usuario no encontrado (002)" });
         }
 
         res.status(200).json({
@@ -77,7 +77,7 @@ export const borrarPerfil = async (req, res) => {
         const eliminado = await user.findOneAndDelete({ correo: email });
 
         if (!eliminado) {
-            return res.status(404).json({ message: "Usuario no encontrado" });
+            return res.status(404).json({ message: "Usuario no encontrado (003)" });
         }
 
         res.status(200).json({

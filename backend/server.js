@@ -30,4 +30,4 @@ app.use("/api/Recuperar", RecuperarPassword);
 app.use("/api/pedidos", PedidosRouter);
 app.use("/api/admin", adminRoutes);
 
-app.listen(8081, () => console.log('Servidor corriendo en https://e-commerce-smlw.onrender.com'));
+app.listen(8081, () => console.log('Servidor corriendo en http://localhost:8081'));

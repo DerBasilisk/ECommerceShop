@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const data = { nombre, apellido, edad, correo, telefono, passwords: password };
 
-        const response = await fetch("https://e-commerce-smlw.onrender.com/api/user/register", {
+        const response = await fetch("http://localhost:8081/api/user/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

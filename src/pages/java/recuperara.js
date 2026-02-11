@@ -3,7 +3,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
 
     const correo = document.getElementById("emailveri").value;
 
-    const response = await fetch("https://e-commerce-smlw.onrender.com/api/Recuperar/solicitar-codigo", {
+    const response = await fetch("http://localhost:8081/api/Recuperar/solicitar-codigo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ correo })

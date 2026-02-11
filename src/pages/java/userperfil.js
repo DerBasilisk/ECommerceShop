@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ========== CARGAR PERFIL DEL USUARIO ==========
     async function cargarPerfil() {
         try {
-            const res = await fetch("https://e-commerce-smlw.onrender.com/api/perfil/obtener", {
+            const res = await fetch("http://localhost:8081/api/perfil/obtener", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: emailUsuario })
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 datos: nuevosDatos
             };
     
-            const res = await fetch("https://e-commerce-smlw.onrender.com/api/perfil/update", {
+            const res = await fetch("http://localhost:8081/api/perfil/update", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ========== ELIMINAR CUENTA ==========
     async function eliminarCuenta(password) {
         try {
-            const res = await fetch("https://e-commerce-smlw.onrender.com/api/perfil/borrar", {
+            const res = await fetch("http://localhost:8081/api/perfil/borrar", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

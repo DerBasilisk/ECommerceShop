@@ -1,14 +1,17 @@
 import express from "express";
 import { verificarToken, soloAdmin } from "../middlewares/auth.middleware.js";
-import { crearProducto, obtenerProducto, actualizarProducto, eliminarProducto 
-} from "../controllers/productcontroller.js";
 
 const router = express.Router();
 
-router.post("/", verificarToken, soloAdmin, crearProducto);
-router.get("/", verificarToken, obtenerProducto);
-router.put("/:id", verificarToken, soloAdmin, actualizarProducto);
-router.delete("/:id", verificarToken, soloAdmin, eliminarProducto)
+router.get("/dashboard", verificarToken, soloAdmin, (req,res) => {
+    res.json({
+        message: "✅ Bienvenido al panel de administrador",
+        admin: {
+            nombre: req.usuario.nombre,
+            correo: req.usuario.correo,
+            rol: req.usuario.rol
+        }
+    });
+});
 
 export default router;
-

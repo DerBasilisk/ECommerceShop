@@ -23,42 +23,34 @@ export const loginuser = async (req, res) => {
       return res.status(401).json({ message: "Contraseña incorrecta" });
     }
 
-    console.log("👤 Usuario encontrado:", {
-      _id: usuario._id,
-      userId: usuario.userId,
-      correo: usuario.correo
-    });
-
-    // ✅ CORREGIDO: Generar token con _id de MongoDB
+    //Generar el token JWT con rol incluido
     const token = jwt.sign(
       {
-        _id: usuario._id.toString(),  // ← Usar _id en lugar de userId
+        _id: usuario._id,
         rol: usuario.rol,
       },
       process.env.JWT_SECRET,
       { expiresIn: "4h" }
-    );
+    )
 
-    console.log("🔑 Token generado para _id:", usuario._id);
 
-    // Responder (SIN enviar la contraseña)
+    //validar
     res.status(200).json({
-      message: "Inicio Correcto",
+      message:"Inicio Correcto",
       token,
-      usuario: {
-        userId: usuario.userId,
-        nombre: usuario.nombre,
-        apellido: usuario.apellido,
-        edad: usuario.edad,
-        telefono: usuario.telefono,
-        correo: usuario.correo,
-        rol: usuario.rol
-        // ❌ NO enviar passwords
+      usuario:{
+        userId:usuario.userId,
+        nombre:usuario.nombre,
+        apellido:usuario.apellido,
+        edad:usuario.edad,
+        telefono:usuario.telefono,
+        correo:usuario.correo,
+        passwords:usuario.passwords,
+        rol:usuario.rol
       }
-    });
+    })
 
   } catch (error) {
-    console.error("❌ Error en login:", error);
     res.status(500).json({ message: "Error al iniciar sesión", error: error.message });
   }
 };

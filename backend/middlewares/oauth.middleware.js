@@ -2,6 +2,7 @@
 import jwt from "jsonwebtoken";
 import user from "../models/user.js";
 
+// Verificar y consultar el usuario
 export const verificarToken = async (req, res, next) => {
     try {
         const authHeader = req.headers["authorization"];
@@ -11,37 +12,21 @@ export const verificarToken = async (req, res, next) => {
         }
 
         const token = authHeader.split(" ")[1];
+
+        //decodificar el token
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-        console.log("🔑 Token decodificado:", decoded);
-
-        // Intentar ambas búsquedas
-        let usuario = await user.findOne({ userId: decoded.userId }).select("-passwords");
-        
-        // Si no encuentra por userId, intentar por _id
-        if (!usuario && decoded.userId) {
-            console.log("⚠️ No encontrado por userId, intentando por _id...");
-            usuario = await user.findById(decoded.userId).select("-passwords");
-        }
-
+        //Consular el usuario actualizado
+        const usuario = await user.findById(decoded._id).select("-passwords")
         if (!usuario) {
-            console.log("❌ Usuario NO encontrado");
-            console.log("📌 decoded.userId:", decoded.userId);
-            
-            // Mostrar usuarios en DB para debug
-            const usuarios = await user.find().limit(3).select("userId _id correo");
-            console.log("📋 Usuarios en DB:", JSON.stringify(usuarios, null, 2));
-            
-            return res.status(401).json({ message: "Usuario no encontrado" })
+            return res.status(401).json({ message: "Usuario no encontrado (004)" })
         }
 
-        console.log("✅ Usuario encontrado:", usuario.correo);
-
+        //Guardamos el usuario
         req.usuario = usuario;
         next();
         
     } catch (error) {
-        console.error("❌ Error completo:", error);
         if(error.name === "TokenExpiredError") {
             return res.status(401).json({ message: "Token expirado, Inicia Sesión Nuevamente"});
         }
@@ -52,6 +37,7 @@ export const verificarToken = async (req, res, next) => {
     }
 };
 
+// Solo Admin
 export const soloAdmin = (req,res, next) => {
     if(req.usuario?.rol !== "admin") {
         return res.status(403).json({ message: "Acceso Denegado: se requiere rol admin "});
@@ -59,6 +45,7 @@ export const soloAdmin = (req,res, next) => {
     next();
 };
 
+// Solo User
 export const soloUser = (req,res, next) => {
     if(req.usuario?.rol !== "user") {
         return res.status(403).json({ message: "Acceso Denegado: se requiere rol user "});
